@@ -1,20 +1,9 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
 'use client'
 
 import { Fragment, useState } from 'react'
+// @ts-ignore
+import images from "../../assets/constants/images.js";
 import {
     Dialog,
     DialogBackdrop,
@@ -154,7 +143,7 @@ const navigation = {
     ],
 }
 
-export default function Example() {
+export default function NavBar() {
     const [open, setOpen] = useState(false)
 
     return (
@@ -190,7 +179,7 @@ export default function Example() {
                                     {navigation.categories.map((category) => (
                                         <Tab
                                             key={category.name}
-                                            className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
+                                            className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-[#2FB44B] data-[selected]:text-[#2FB44B]"
                                         >
                                             {category.name}
                                         </Tab>
@@ -279,8 +268,8 @@ export default function Example() {
                 </div>
             </Dialog>
 
-            <header className="relative bg-white">
-                <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+            <header className="relative bg-white z-20">
+                <p className="flex h-10 items-center justify-center bg-[#2FB44B] px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
                     Get free delivery on orders over $100
                 </p>
 
@@ -303,9 +292,9 @@ export default function Example() {
                                     <a href="#">
                                         <span className="sr-only">Your Company</span>
                                         <img
-                                            alt=""
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                            className="h-8 w-auto"
+                                            alt="logo"
+                                            src= {images.Logo}
+                                            className="h-28 pt-2  w-auto"
                                         />
                                     </a>
                                 </div>
@@ -317,7 +306,7 @@ export default function Example() {
                                             <Popover key={category.name} className="flex">
                                                 <div className="relative flex">
                                                     <PopoverButton
-                                                        className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                                                        className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-[#2FB44B] data-[open]:text-[#2FB44B]">
                                                         {category.name}
                                                     </PopoverButton>
                                                 </div>
