@@ -268,9 +268,9 @@ export default function NavBar() {
                 </div>
             </Dialog>
 
-            <header className="relative bg-white z-20">
+            <header className="fixed w-full bg-white z-20">
                 <p className="flex h-10 items-center justify-center bg-[#2FB44B] px-4 text-sm font-medium text-white px-6 lg:px-8">
-                    Get free delivery on orders over $100
+                    Welcome if you have any questions, please contact us
                 </p>
 
                 <nav aria-label="Top" className="border-b border-gray-200">

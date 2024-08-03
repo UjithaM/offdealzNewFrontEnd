@@ -27,7 +27,7 @@ const MainSlideBanner = () => {
     }, []);
 
     return (
-        <div className="max-w-7xl px-6 mx-auto py-4">
+        <div className="max-w-7xl px-6 mx-auto py-4 pt-32">
             <div className="relative w-full h-80 overflow-hidden rounded-3xl z-10">
                 <div
                     className="flex transition-transform duration-1000"
