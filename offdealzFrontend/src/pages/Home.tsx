@@ -1,69 +1,19 @@
 // src/pages/Home.tsx
 import NavBar from "../components/layout/Header";
 import MainSlideBanner from "../components/commom/MainSlideBanner";
-import Card from "../components/product/ProductCard";
+import Product from "../components/product/Product.tsx";
+import Category from "../components/Category/Category.tsx";
+import Footer from "../components/layout/Footer.tsx";
 
 const Home = () => {
-    const handleButtonClick = () => {
-        alert('Item added to cart');
-    };
+
     return (
         <>
             <NavBar/>
             <MainSlideBanner/>
-            <div className="flex flex-wrap sm:justify-between justify-center max-w-7xl mx-auto py-4 sm:px-6">
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Sample Product"
-                    price="$19.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Sample Product"
-                    price="$19.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-                <Card
-                    image="https://via.placeholder.com/150"
-                    title="Another Product"
-                    price="$29.99"
-                    onButtonClick={handleButtonClick}
-                />
-            </div>
-            <div className="flex flex-wrap sm:justify-between justify-center max-w-7xl mx-auto py-4 sm:px-6">
-                <h1 className='text-3xl font-bold font-mono'>Categories</h1>
-            </div>
+            <Product/>
+            <Category/>
+            <Footer/>
         </>
     );
 }
